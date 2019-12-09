@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularjs": {
+    "angular-node": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularjs",
+            "outputPath": "dist/angular-node",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angularjs:build"
+            "browserTarget": "angular-node:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularjs:build:production"
+              "browserTarget": "angular-node:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularjs:build"
+            "browserTarget": "angular-node:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "angularjs-e2e": {
+    "angular-node-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularjs:serve"
+            "devServerTarget": "angular-node:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularjs:serve:production"
+              "devServerTarget": "angular-node:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "angularjs"
+  "defaultProject": "angular-node"
 }
